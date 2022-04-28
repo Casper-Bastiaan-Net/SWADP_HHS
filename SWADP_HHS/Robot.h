@@ -6,11 +6,11 @@
 class Robot
 {
 public:
-	Robot(Positie);
+	Robot(Positie*);
 	virtual void run() =0;
 	virtual void show() =0;
 private:
-	Positie pos;
+	Positie* pos;
 };
 
 #endif
