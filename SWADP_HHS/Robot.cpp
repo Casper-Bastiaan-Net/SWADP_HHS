@@ -4,9 +4,9 @@
 Robot::Robot(Positie* p): pos(p) {}
 
 void Robot::run() {
-	//do stuff
+	this->pos->move(20, 10);
 }
 
 void Robot::show() {
-	std::cout << "show stuff" << std::endl;
+	std::cout << "x: " << this->pos->x() << " y: " << this->pos->y() << std::endl;
 }
