@@ -7,8 +7,8 @@ class Robot
 {
 public:
 	Robot(Positie*);
-	virtual void run() =0;
-	virtual void show() =0;
+	virtual void run();
+	virtual void show();
 private:
 	Positie* pos;
 };
