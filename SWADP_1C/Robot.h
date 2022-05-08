@@ -1,16 +1,15 @@
 #ifndef ROBOT_H
 #define ROBOT_H
-
-class Positie{};
+#include "Tracker.h"
 
 class Robot
 {
 public:
-	Robot(Positie*);
+	Robot(Tracker*);
 	virtual void run();
 	virtual void show();
 private:
-	Positie* pos;
+	Tracker* pos;
 };
 
 #endif

@@ -1,11 +1,10 @@
 #include "Robot.h"
-#include "Positie.h"
 #include <iostream>
 
-Robot::Robot(Positie* p): pos(p) {}
+Robot::Robot(Tracker* p): pos(p) {}
 
 void Robot::run() {
-	this->pos->move(20, 10);
+	this->pos->Move(20, 10);
 }
 
 void Robot::show() {
