@@ -3,6 +3,7 @@
 #include <iostream>
 
 Robot::Robot(Positie* p): pos(p) {}
+Robot::~Robot() {}
 
 void Robot::run() {
 	this->pos->move(20, 10);

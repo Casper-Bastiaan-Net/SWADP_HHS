@@ -7,6 +7,7 @@ class Positie
 {
 public:
 	Positie(int, int);
+	virtual ~Positie();
 	virtual int x();
 	virtual int y();
 	virtual void move(int, int);
