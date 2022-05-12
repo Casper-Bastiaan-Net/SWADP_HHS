@@ -1,4 +1,6 @@
 #include "Snelheid.h"
+#include "Observer.h"
+#include <iostream>
 
 Snelheid::Snelheid()
 {

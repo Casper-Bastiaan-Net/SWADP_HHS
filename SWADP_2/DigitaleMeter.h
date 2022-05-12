@@ -2,10 +2,6 @@
 #define __DigitaleMeter_H
 #pragma once
 
-#include "Observer.h"
-#include "Snelheid.h"
-#include <iostream>
-
 class DigitaleMeter : public Observer
 {
 public:

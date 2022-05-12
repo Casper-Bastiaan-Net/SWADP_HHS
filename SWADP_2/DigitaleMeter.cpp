@@ -1,4 +1,7 @@
 #include "DigitaleMeter.h"
+#include "Observer.h"
+#include "Snelheid.h"
+#include <iostream>
 
 DigitaleMeter::DigitaleMeter(Subject* subject) : Observer(subject)
 {

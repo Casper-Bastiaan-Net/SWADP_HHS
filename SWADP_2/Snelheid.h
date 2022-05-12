@@ -2,9 +2,6 @@
 #define __Snelheid_H
 #pragma once
 
-#include "Observer.h"
-#include <iostream>
-
 class Snelheid : public Subject
 {
 private:

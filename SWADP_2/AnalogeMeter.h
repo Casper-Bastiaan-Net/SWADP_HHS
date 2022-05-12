@@ -2,10 +2,6 @@
 #define __AnalogeMeter_H
 #pragma once
 
-#include "Observer.h"
-#include "Snelheid.h"
-#include <iostream>
-
 class AnalogeMeter : public Observer
 {
 public:

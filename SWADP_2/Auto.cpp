@@ -1,4 +1,5 @@
 #include "Auto.h"
+#include "Snelheid.h"
 
 Auto::Auto(Snelheid* ptr) : speedPointer(ptr)
 {

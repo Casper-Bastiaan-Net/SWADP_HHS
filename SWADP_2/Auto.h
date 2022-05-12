@@ -2,8 +2,6 @@
 #define __Auto_H
 #pragma once
 
-#include "Snelheid.h"
-
 class Auto
 {
 private:
