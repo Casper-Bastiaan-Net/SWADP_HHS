@@ -14,4 +14,5 @@ float Snelheid::geef()
 void Snelheid::meet()
 {
 	std::cin >> this->waarde;
+	this->notify();
 }

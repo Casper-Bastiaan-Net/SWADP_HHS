@@ -6,6 +6,8 @@
 
 class Auto
 {
+private:
+	Snelheid* speedPointer;
 public:
 	Auto(Snelheid*);
 	void meetSnelheid();

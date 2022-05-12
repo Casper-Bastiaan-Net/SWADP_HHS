@@ -1,5 +1,6 @@
 #include "DigitaleMeter.h"
 #include "Observer.h"
+#include "Snelheid.h"
 #include <iostream>
 
 DigitaleMeter::DigitaleMeter(Subject* subject) : Observer(subject)
@@ -9,5 +10,6 @@ DigitaleMeter::DigitaleMeter(Subject* subject) : Observer(subject)
 
 void DigitaleMeter::update()
 {
-	std::cout << "digitale meter update" << std::endl;
+	Snelheid *speed = dynamic_cast<Snelheid*>(this->getSubject());
+	std::cout << "digitale meter update: " << speed->geef() << std::endl;
 }
