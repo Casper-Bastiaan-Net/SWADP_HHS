@@ -9,8 +9,8 @@ private:
 	float waarde = 0;
 public:
 	Snelheid();
-	void meet();
-	float geef();
+	virtual void meet();
+	virtual float geef();
 	virtual ~Snelheid();
 };
 

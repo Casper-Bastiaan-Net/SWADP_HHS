@@ -10,7 +10,7 @@ private:
 	Snelheid* speedPointer;
 public:
 	Auto(Snelheid*);
-	void meetSnelheid();
+	virtual void meetSnelheid();
 	virtual ~Auto();
 };
 
