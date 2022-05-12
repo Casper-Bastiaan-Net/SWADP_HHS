@@ -141,11 +141,13 @@
   <ItemGroup>
     <ClCompile Include="Auto.cpp" />
     <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="Snelheid.cpp" />
     <ClCompile Include="SWADP_2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Auto.h" />
     <ClInclude Include="Observer.h" />
+    <ClInclude Include="Snelheid.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
