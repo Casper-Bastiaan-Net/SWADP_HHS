@@ -6,8 +6,9 @@
 class Snelheid : public Subject
 {
 private:
-	float waarde;
+	float waarde = 0;
 public:
+	Snelheid();
 	void meet();
 	float geef();
 };
