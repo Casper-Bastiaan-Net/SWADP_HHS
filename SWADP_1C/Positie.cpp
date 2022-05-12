@@ -1,6 +1,7 @@
 #include "Positie.h"
 
 Positie::Positie(int x, int y) : X(x), Y(y) {}
+Positie::~Positie() {}
 
 void Positie::Move(int dx, int dy) {
 	this->X += dx;
