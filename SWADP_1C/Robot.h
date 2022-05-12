@@ -1,11 +1,13 @@
 #ifndef ROBOT_H
 #define ROBOT_H
-#include "Tracker.h"
+
+class Tracker;
 
 class Robot
 {
 public:
 	Robot(Tracker*);
+	virtual ~Robot();
 	virtual void run();
 	virtual void show();
 private:

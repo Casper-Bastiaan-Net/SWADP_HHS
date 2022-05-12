@@ -6,6 +6,7 @@ class Positie: public Tracker
 {
 public:
 	Positie(int, int);
+	virtual ~Positie();
 	virtual int x();
 	virtual int y();
 	virtual void Move(int, int);
@@ -15,4 +16,3 @@ private:
 };
 
 #endif
-
