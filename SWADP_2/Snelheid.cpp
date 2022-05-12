@@ -16,3 +16,8 @@ void Snelheid::meet()
 	std::cin >> this->waarde;
 	this->notify();
 }
+
+Snelheid::~Snelheid()
+{
+
+}
