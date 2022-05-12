@@ -1,5 +1,4 @@
 #include "DigitaleMeter.h"
-#include "Observer.h"
 #include "Snelheid.h"
 #include <iostream>
 

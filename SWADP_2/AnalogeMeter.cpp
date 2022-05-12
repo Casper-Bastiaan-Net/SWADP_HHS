@@ -1,5 +1,4 @@
 #include "AnalogeMeter.h"
-#include "Observer.h"
 #include "Snelheid.h"
 #include <iostream>
 
