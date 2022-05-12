@@ -2,7 +2,7 @@
 #define __Auto_H
 #pragma once
 
-#include "Snelheid.h"
+class Snelheid;
 
 class Auto
 {
