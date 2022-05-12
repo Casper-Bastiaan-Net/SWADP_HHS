@@ -1,11 +1,7 @@
 #include "AnalogeMeter.h"
-#include "Observer.h"
-#include "Snelheid.h"
-#include <iostream>
 
 AnalogeMeter::AnalogeMeter(Subject* subject) : Observer(subject)
 {
-
 }
 
 void AnalogeMeter::update()

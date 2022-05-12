@@ -1,5 +1,4 @@
 #include "Snelheid.h"
-#include <iostream>
 
 Snelheid::Snelheid()
 {

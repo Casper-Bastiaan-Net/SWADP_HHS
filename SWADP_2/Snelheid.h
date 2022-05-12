@@ -3,6 +3,7 @@
 #pragma once
 
 #include "Observer.h"
+
 class Snelheid : public Subject
 {
 private:

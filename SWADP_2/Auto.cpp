@@ -2,7 +2,6 @@
 
 Auto::Auto(Snelheid* ptr) : speedPointer(ptr)
 {
-
 }
 
 void Auto::meetSnelheid()
@@ -12,5 +11,4 @@ void Auto::meetSnelheid()
 
 Auto::~Auto()
 {
-
 }

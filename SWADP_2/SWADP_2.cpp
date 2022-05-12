@@ -5,7 +5,6 @@
 #include "Snelheid.h"
 #include "AnalogeMeter.h"
 #include "DigitaleMeter.h"
-#include <iostream>
 
 int main()
 {
