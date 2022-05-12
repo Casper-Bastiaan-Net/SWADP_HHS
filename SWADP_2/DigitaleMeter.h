@@ -8,6 +8,7 @@ class DigitaleMeter : public Observer
 {
 public:
 	DigitaleMeter(Subject*);
+	virtual void update();
 };
 
 #endif

@@ -8,7 +8,7 @@ class AnalogeMeter : public Observer
 {
 public:
 	AnalogeMeter(Subject*);
-
+	virtual void update();
 };
 
 #endif
