@@ -11,6 +11,7 @@ private:
 public:
 	Auto(Snelheid*);
 	void meetSnelheid();
+	virtual ~Auto();
 };
 
 #endif

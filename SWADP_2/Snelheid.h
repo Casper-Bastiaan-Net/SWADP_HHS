@@ -11,6 +11,7 @@ public:
 	Snelheid();
 	void meet();
 	float geef();
+	virtual ~Snelheid();
 };
 
 #endif
