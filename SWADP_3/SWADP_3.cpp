@@ -66,7 +66,7 @@ private: string Name;
 		 int    AantalLevens;
 
 public: Ninja(string n) : Name(n), AantalLevens(1) { }
-		virtual void   draw() { cout << name() << AantalLevens; }
+		virtual void   draw() { std::cout << name() << AantalLevens << std::endl; }
 		virtual string name() { return Name; }
 		virtual int  aantalLevens() { return AantalLevens; }
 		virtual void incLevens() { AantalLevens++; notify(); }
@@ -97,6 +97,7 @@ int main()
 	j.incLevens();
 	j.incLevens();
 	h.incLevens();
+	while (1);
 	return 0;
 }
 
