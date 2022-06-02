@@ -97,7 +97,7 @@ int main()
 	j.incLevens();
 	j.incLevens();
 	h.incLevens();
-	while (1);
+	while (1); //loop anders exit het programma gelijk idk waarom
 	return 0;
 }
 
