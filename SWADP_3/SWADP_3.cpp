@@ -53,7 +53,7 @@ Observer::~Observer()
 // DomainLayer
 // ================================================================
 
-class Element
+class Element : public Subject
 {
 public: virtual ~Element() {}
 		virtual void   draw() = 0;
@@ -69,33 +69,34 @@ public: Ninja(string n) : Name(n), AantalLevens(1) { }
 		virtual void   draw() { cout << name() << AantalLevens; }
 		virtual string name() { return Name; }
 		virtual int  aantalLevens() { return AantalLevens; }
-		virtual void incLevens() { AantalLevens++; }
-		virtual void decLevens() { AantalLevens--; }
+		virtual void incLevens() { AantalLevens++; notify(); }
+		virtual void decLevens() { AantalLevens--; notify(); }
 };
 
 // ================================================================
 // Interfacelayer
 // ================================================================
 
-class NinjaWindow
+class NinjaWindow : public Observer
 {
 private: Ninja& N;
 
-public: NinjaWindow(Ninja& n) : N(n) {}
+public: NinjaWindow(Ninja& n) : N(n), Observer(&n) {}
 		virtual ~NinjaWindow() {}
-		virtual void draw() { N.draw(); }
+		virtual void draw() { this->N.draw(); }
+		virtual void update() { this->draw(); }
 };
 
 int main()
 {
 	Ninja h("Henk"), j("Joop");
 	NinjaWindow hW(h), jW(j);
-	h.incLevens(); hW.draw();
-	h.incLevens(); hW.draw();
-	j.incLevens(); jW.draw();
-	j.incLevens(); jW.draw();
-	j.incLevens(); jW.draw();
-	h.incLevens(); hW.draw();
+	h.incLevens();
+	h.incLevens();
+	j.incLevens();
+	j.incLevens();
+	j.incLevens();
+	h.incLevens();
 	return 0;
 }
 
