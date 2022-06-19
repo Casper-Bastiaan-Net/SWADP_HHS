@@ -151,16 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EF2000.cpp" />
     <ClCompile Include="HotMotor.cpp" />
-    <ClCompile Include="Machine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Motor.cpp" />
-    <ClCompile Include="Mtwo.cpp" />
     <ClCompile Include="Observer.cpp" />
-    <ClCompile Include="Mone.cpp" />
     <ClCompile Include="Temp300.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EF2000.h" />
     <ClInclude Include="HotMotor.h" />
     <ClInclude Include="Machine.h" />
     <ClInclude Include="Mone.h" />

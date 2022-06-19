@@ -1,15 +1,15 @@
 #ifndef MACHINE_H
-#define MACHINe_h
+#define MACHINE_H
 
+class Motor;
 class Mone;
 class Mtwo;
 
 class Machine {
 public:
-	Machine(Mone* mone, Mtwo* mtwo);
-	virtual ~Machine() {};
-	virtual Mone* motor1() { return mone; };
-	virtual Mtwo* motor2() { return mtwo; };
+	virtual ~Machine() {} ;
+	virtual Motor* motor1() = 0;
+	virtual Motor* motor2() = 0;
 	virtual bool getState() = 0;
 	virtual void run() = 0;
 	virtual void halt() = 0;
