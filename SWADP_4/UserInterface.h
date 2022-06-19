@@ -2,7 +2,8 @@
 
 class UserInterface
 {
-	virtual ~UserInterface() = 0;
+public: 
+	virtual ~UserInterface() {};
 	virtual int Run() = 0;
-	virtual void Update() = 0;
+	virtual void update() = 0;
 };

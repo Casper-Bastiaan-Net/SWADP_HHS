@@ -1,5 +1,6 @@
 #ifndef TSENSOR_H
 #define TSENSOR_H
+#include "Observer.h"
 
 class Motor;
 

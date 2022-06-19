@@ -1,72 +1,78 @@
 #include "ConsoleUI.h"
-#include "UserInterface.h"
-#include "Observer.h"
 #include "Machine.h"
+#include "Motor.h"
+#include "Temp300.h"
 #include <iostream>
+#include <windows.h> 
 
 using namespace std;
 
-ConsoleUI::ConsoleUI() : Observer(this->S)
-{
-
+ConsoleUI::ConsoleUI(Machine* m) : Observer(dynamic_cast<Subject*>(m->motor1()->tsensor())) {
+	dynamic_cast<Temp300*>(m->motor2()->tsensor())->insert(this);
+	machines.push_back(m);
 }
 
 int ConsoleUI::Run()
 {
-	int key = waitKey(500);
-	switch key
-	case esc:
-		return -1;
-	case m:
-		int machineNum;
-		char newState;
-		cout << geef machinenummer;
-		cin >> machineNum;
-		cout << aan of uit, A voor aan, U voor uit;
-		if (newState == 'A') {
-			machines[machineNum].run()
-		}
-		else {
-			machines[machineNum].halt();
-		}
-	case default:
-		return 0;
-}
 
-void ConsoleUI::Draw(Machine m, int i)
-{
-	cout << machinecount << machine.getStatus();
-	cout << machine.motor1().getStatus();
-	if (machine.motor1() == Hotmotor) {
-		cout << machine.motor1().sensor().temperatuur()
-	}
-	cout << machine.motor2().getStatus();
-	if (machine.motor2() == Hotmotor) {
-		cout << machine.motor2().sensor().temperatuur()
+	char key;
+	cin >> key;
+	switch (key) {
+		case 120: case 88:
+		{
+			return -1;
+		}
+		case 109: case 77:
+		{
+			int machineNum;
+			char newState;
+			cout << "geef machinenummer" << endl;
+			cin >> machineNum;
+			cout << "aan of uit, A voor aan, U voor uit" << endl;
+			cin >> newState;
+			if (newState == 'A' || newState == 'a') {
+				machines[machineNum]->run();
+			}
+			else if (newState == 'U' || newState == 'u') {
+				machines[machineNum]->halt();
+			}
+		}
+		default:
+			return 0;
 	}
 }
 
-void ConsoleUI::Update()
+void ConsoleUI::Draw(Machine* machine, int i)
 {
-	//clearConsole;
+	cout << "machine " << i << " is in staat " << machine->getState() << endl;
+	cout << "motor 1 is in staat " << machine->motor1()->getState() << " met temperatuur " << machine->motor1()->tsensor()->temperatuur() << endl;
+	cout << "motor 2 is in staat " << machine->motor2()->getState() << " met temperatuur " << machine->motor2()->tsensor()->temperatuur() << endl;
+}
+
+void ConsoleUI::update()
+{
+	//clear console
+	std::cout << "\x1B[2J\x1B[H";
+
 	int machineCount = 0;
 	for (auto i : machines) {
+		Draw(i, machineCount);
 		machineCount++;
-		draw(i, machineCount);
 	}
-	cout << instructions;
+	cout << "";
 }
 
-void ConsoleUI::Add(Machine m)
+void ConsoleUI::Add(Machine* m)
 {
-	//machines.push(m);
-	m.motor1().tsensor().insert(self);
-	m.motor2().tsensor().insert(self);
+	machines.push_back(m);
+	dynamic_cast<Temp300*>(m->motor1()->tsensor())->insert(this);
+	dynamic_cast<Temp300*>(m->motor2()->tsensor())->insert(this);
 }
 
-ConsoleUI::Remove(Machine m)
+void ConsoleUI::Remove(Machine* m)
 {
-	//machines.remove(machine);
-	m.motor1().tsensor().remove(self);
-	m.motor2().tsensor().remove(self);
+	auto it = std::find(machines.begin(), machines.end(), m);
+	if (it != machines.end()) { machines.erase(it); }
+	dynamic_cast<Temp300*>(m->motor1()->tsensor())->remove(this);
+	dynamic_cast<Temp300*>(m->motor2()->tsensor())->remove(this);
 }
