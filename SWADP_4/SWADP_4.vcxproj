@@ -157,6 +157,7 @@
     <ClCompile Include="Mtwo.cpp" />
     <ClCompile Include="Observer.cpp" />
     <ClCompile Include="Mone.cpp" />
+    <ClCompile Include="Temp300.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Machine.h" />
@@ -164,6 +165,7 @@
     <ClInclude Include="Motor.h" />
     <ClInclude Include="Mtwo.h" />
     <ClInclude Include="Observer.h" />
+    <ClInclude Include="Temp300.h" />
     <ClInclude Include="TSensor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
