@@ -6,11 +6,11 @@ Temp300::~Temp300(){}
 
 void Temp300::read() {
 	//TODO: replace this with actual sensor measurements
-	if (temp < 80) {
+	if (temp < 120) {
 		temp += 10;
 	}
 	else {
-		temp -= 14;
+		temp -= 43;
 	}
 
 	this->notify();

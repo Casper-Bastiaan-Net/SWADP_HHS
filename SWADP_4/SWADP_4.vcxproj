@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HotMotor.cpp" />
     <ClCompile Include="Machine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Motor.cpp" />
@@ -160,6 +161,7 @@
     <ClCompile Include="Temp300.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HotMotor.h" />
     <ClInclude Include="Machine.h" />
     <ClInclude Include="Mone.h" />
     <ClInclude Include="Motor.h" />

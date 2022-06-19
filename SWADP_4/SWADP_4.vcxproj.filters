@@ -36,6 +36,9 @@
     <ClCompile Include="Temp300.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HotMotor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Observer.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Temp300.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HotMotor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
